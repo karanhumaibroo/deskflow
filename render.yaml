@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: deskflow-api
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node src/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
